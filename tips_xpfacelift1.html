@@ -1,0 +1,106 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+    <title>The Portal</title>
+	<link rel="stylesheet" href="standard.css" type="text/css" />
+	<link rel="icon" type="image/png" href="favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="The personal site of aspiring webmaster and FOSS-enthusiast Adrian Sampson" />
+	<meta name="author" content="Adrian Sampson" />
+	<meta name="keywords" content="the portal, ronin-sage, blog, personal, adrian sampson, xp theme howto, uxtheme.dll" />
+</head>
+<body>
+
+<div id="topbar">
+	<img id="logo" src="lib/logo.png" alt="[logo]" />
+</div>
+
+<div id="container">
+
+<div id="sidebar">
+    <div id="side-nav">
+		<ul>
+            <li><a href="gaming.html">++Gaming++</a></li>
+	        <li><a href="quicklist.html">++Recommended Apps++</a></li>
+            <li><a href="tips.html">++Customization &amp; Tips++</a></li>
+	    </ul>
+	</div>
+</div>
+
+<div id="header">
+	<ul id="top-nav">
+	    <li><a href="index.html">Home</a></li>
+        <li><a href="soul.html">The Soul</a></li>
+        <li><a href="medium.html">::The Medium::</a></li>
+        <li><a href="scripture.html">The Scripture</a></li>
+        <li><a href="path.html">The Path</a></li>
+    </ul>
+    <h1>The Medium</h1>
+</div>
+
+<div id="content">
+    <h2><span class="add">++</span>Customization &amp; Tips<span class="add">++</span></h2>
+        <h3>:: Giving Your Windows XP Desktop A Facelift ::</h3>
+             
+        <p>One of the many downsides of a Windows desktop is the inherent lack of customization, in every sense of the word.
+        Luckily, there exists some ways to "hack" your Windows desktop's aesthetics, at least(it's a lot safer than it sounds) and ultimately create an
+        attractive, but moreover custom-designed desktop look and feel.</p>
+                
+        <p>This article outlines the initial steps toward achieving a non-vanilla look for your XP desktop(though the methods described here are applicable to
+        other Windows operating systems too, for the most part).</p>
+                
+        <h4>"Unleashing t3h powah": hacking uxtheme.dll</h4>
+            
+        <p>First things first.</p>
+        <p>One of the more immediate ways of giving your Windows desktop a personalized look and feel is to change the style/theme
+        of it. The downside to this is that Microsoft provides next to no real solutions of their own, but there exists many unofficial ways to stylize
+        your desktop theme.</p>
+                
+        <img style="float:left;margin-right:10px" src="lib/uxpatch.png" alt="UxTender" />
+                
+        <p>The first thing you'll need to do is patch a file called <em>uxtheme.dll</em>. When patched, this allows for the user to apply third-party
+        themes to their desktop. Probably the most straight-forward way to do this is to use a convenient little app to automate the process, 
+        <a href="http://www.softpedia.com/get/System/OS-Enhancements/SP3-UxTheme-Patcher.shtml">UxTender</a>. Using it is rather straight-forward,
+        <b>although I can't guarantee it'll work normally/safely on your system</b>, but there's no reason why it shouldn't(note that it's designed for
+        Windows XP SP2/SP3).</p>
+                
+        <p>After using it, be sure to reboot for the changes to take place.</p>
+                
+        <br clear="left" />
+              
+        <h4>Putting it all together</h4>
+    
+	    <p>Although it may seem like nothing changed(because, for the most part, nothing did, yet anyway), you've just unlocked the true potential of
+        your Windows desktop! Now, on to making this transformation more, shall we say, evident--getting a custom theme.</p>
+                
+        <p>There's countless places on the web for third-party Windows themes designed for [patched] XP setups, but my personal favorite is 
+        <a href="http://customize.org/xpthemes">Customize.org</a>.</p>
+                
+        <p>The process of getting the theme "activated" is typically a matter of extracting the downloaded theme archive's contents into:</p>
+               
+        <code>C:/Windows/Resources/themes/</code>
+                
+        <p>Making sure the archive extracts in its own directory(.../Resources/[theme-name]), then you simply have to apply the theme by right-clicking 
+        the desktop, opening the <em>Display Properties</em> dialog, and changing the appropriate settings in the <em>Appearance</em> tab:</p>
+                
+        <img style="margin-left:100px" src="lib/appearance.png" alt="Appearance tab" />
+                
+        <p>If you don't see the new theme there, you probably have the theme extracted one directory too "deep"(make sure you have files like
+        <em>"[style].msstyles"</em> and such in the <br/>
+        <em>../Themes/[style-name]/</em> directory).</p>
+                
+        <p>And that's pretty much all there is to it!</p>
+</div>
+	<p>
+    	<a href="http://validator.w3.org/check?uri=referer">
+    		<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    		<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+		</a>
+	</p>
+</div>
+</body>
+</html>

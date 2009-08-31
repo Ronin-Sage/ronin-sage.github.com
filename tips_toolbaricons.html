@@ -1,0 +1,97 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+<title>The Portal</title>
+  <link rel="stylesheet" href="standard.css" type="text/css" />
+  <link rel="icon" type="image/png" href="favicon.ico" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="The personal site of aspiring webmaster and FOSS-enthusiast Adrian Sampson" />
+  <meta name="author" content="Adrian Sampson" />
+  <meta name="keywords" content="portal, ronin-sage, FOSS, blog, personal, adrian, sampson, linux, mmorpg, review" />
+</head>
+<body>
+
+<div id="topbar">
+  <img id="logo" src="lib/logo.png" alt="[logo]" />
+</div>
+
+<div id="container">
+
+<div id="sidebar">
+  <div id="side-nav">
+  <ul>
+    <li><a href="gaming.html">++Gaming++</a></li>
+    <li><a href="quicklist.html">++Recommended Apps++</a></li>
+    <li><a href="tips.html">++Customization &amp; Tips++</a></li>
+  </ul>
+  </div>
+</div>
+
+<div id="header">
+  <ul id="top-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="soul.html">The Soul</a></li>
+    <li><a href="medium.html">::The Medium::</a></li>
+    <li><a href="scripture.html">The Scripture</a></li>
+    <li><a href="path.html">The Path</a></li>
+  </ul>
+<h1>The Medium</h1>
+</div>
+
+<div id="content">
+  <h2><span class="add">++</span>Customization&amp; Tips<span class="add">++</span></h2>
+  <h3>:: Custom Firefox Bookmark-toolbar Icons ::</h3>
+	
+	<p>Chances are, if you're an avid Firefox user, you have some folders of your own placed on its bookmark toolbar. By default, these folders
+	use the typical vanilla folder icon, but there's actually a way to edit these icons. There are several ways to accomplish this, including an add-on to manage the icons easily, but here we'll focus on the "under-the-hood"
+	method. But first, some file locations to note:</p>
+	
+	<p>Linux:<br/>
+	    <code>~/.mozilla/firefox/[profile]/chrome/userChrome.css</code>
+	</p>
+	
+	<p>Windows:<br/>
+	    <code>../Documents&nbsp;and&nbsp;Settings/[user]/Application&nbsp;Data/Mozilla/Firefox/Profiles/[profile]/chrome/userChrome.css</code>
+	</p>
+	
+	<p>Using a text editor, open up your userChrome.css file(create it if it does not exist).</p>
+	
+	<p>It's a standard CSS(Cascading Style Sheets), so create a section for the <em>-moz-image-region</em> class, defining the attributes like so:</p>
+	
+	<p>
+	    <code>.bookmark-item[container="true"][label="The Barracks"]<br/>
+		    {<br/>
+		    &nbsp;list-style-image: url('/home/ronin-sage/ico/soldier.png') !important;<br/>
+		    &nbsp;-moz-image-region: rect(0px 16px 16px 0px) !important;<br/>
+		    }
+	    </code>
+	</p>
+	<!--<img src="lib/screenshot_toolbaricon1.png" alt="screen1" />-->
+	
+	<p>The <em>label</em> value should be whatever the name of the folder is(in this case, "The Armory" for example).</p>
+	<p><em>list-style-image</em>'s url value is the location of the image you wish to use (I recommend using PNG for transparency purposes).</p>
+	
+	<p>The <em>-moz-image-region</em> is the geometric region of the image file used to create the mini-icon, drawn from the upper-left in this case.
+	While you can use any size image, provided that you use the appropiate region(for instance, "128px" four times/once for a 128x128 image), I'm somewhat sure that the quality takes a hit
+	with the larger files, so I stuck to 16x16 as my standard here.</p>
+	
+	<p>The final product:</p>
+	
+	<img src="lib/screenshot_toolbaricon2.png" alt="screen2" />
+	
+	<p class="comment">You can get symbolic icons from a variety of places, namely <a href="http://www.deviantart.com/#catpath=customization/icons/dock&amp;order=9">deviantART</a></p>
+	<p class="comment">More info: <a href="https://developer.mozilla.org/en/CSS/-moz-image-region">https://developer.mozilla.org/en/CSS/-moz-image-region</a></p>
+</div>
+	<p>
+    		<a href="http://validator.w3.org/check?uri=referer">
+    			<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    			<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+		</a>
+	</p>
+</div>
+</body>
+</html>

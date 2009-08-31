@@ -1,0 +1,133 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+    <title>The Portal</title>
+	<link rel="stylesheet" href="standard.css" type="text/css" />
+	<link rel="icon" type="image/png" href="favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="The personal site of aspiring webmaster and FOSS-enthusiast Adrian Sampson" />
+	<meta name="author" content="Adrian Sampson" />
+	<meta name="keywords" content="portal, ronin-sage, FOSS, blog, personal, adrian, sampson, linux, openbox, nitrogen, Openbox, configuring openbox" />
+</head>
+<body>
+
+<div id="topbar">
+    <img id="logo" src="lib/logo.png" alt="[logo]" />
+</div>
+
+<div id="container">
+
+<div id="sidebar">
+    <div id="side-nav">
+        <ul>
+            <li><a href="gaming.html">++Gaming++</a></li>
+		    <li><a href="quicklist.html">++Recommended Apps++</a></li>
+            <li><a href="tips.html">++Customization &amp; Tips++</a></li>
+       </ul>
+    </div>
+</div>
+
+<div id="header">
+    <ul id="top-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="soul.html">The Soul</a></li>
+        <li><a href="medium.html">::The Medium::</a></li>
+        <li><a href="scripture.html">The Scripture</a></li>
+        <li><a href="path.html">The Path</a></li>
+    </ul>
+    
+    <h1>The Medium</h1>
+</div>
+
+<div id="content">
+    <h2><span class="add">++</span>Customization &amp; Tips<span class="add">++</span></h2>
+
+    <h3>:: Opening Pandora's Box -- Delving into Openbox ::</h3>
+	  
+	   <h4>[Introduction]</h4>
+			
+			<p>As a user of <a href="http://lxde.org">LXDE(Lightweight X11 Desktop)</a>, I had already been accustomed to using and configuring Openbox, which it
+			uses as its adopted window manager, so it wasn't much of a thing for me to switch to using stand-alone OpenBox. If you're wondering, I switched mainly
+			because of the general lack of maturity I felt from its components(namely LXPanel and LXTask).</p>
+			
+			<p>Note that this is <em>*NOT*</em> a complete how-to on setting up Openbox, just a brief overview of some useful things I did that I felt other users 
+			might benefit from knowing. With that said, some common file locations:</p>
+			
+			<p><b>Autostart: </b><code>~/.config/openbox/autostart.sh</code></p>
+			<p><b>General: </b><code>~/.config/openbox/rc.xml</code></p>
+			<p><b>Root-menu: </b><code>~/.config/openbox/menu.xml</code></p>
+			
+			<p>For those [somewhow] unfamiliar, Openbox is minimal and sharply-quick window manager(WM) for X, originally being based on Blackbox but now rewritten. Probably its
+			most distinguishing feature(or at least most immediately recognizable) is the "root menu" that opens up upon right-clicking the desktop.</p>
+			
+			<p>Openbox is a <em>window manager</em>, that is to say, it's merely a program that controls the drawing/placement of windows and provides some basic
+			necessities for desktop usage(this differs from a <em>desktop environment</em>, like Gnome or KDE, in that it is stand-alone component and only manages
+			the windowing aspect the desktop and mostly leaves out other "fluffy" aspects.</p>
+			
+			<h4>[Wallpaper]</h4>
+			
+			    <img align="right" style="margin-right:15px" src="lib/ob_1.png" alt="screenie 1" />
+			
+			    <p>What you'll probably want to do first(okay, "want", not "need") is setup a wallpaper. Personally, I use <a href="http://projects.l3ib.org/nitrogen/">Nitrogen</a>. 
+			    Once installed, it's just a matter of running:</p>
+			    
+			    <p><code>nitrogen ~/Pictures</code>(or whereever your image directory is located)</p>
+			    
+			    <p>Double-click an entry to preview it, and click "Apply" to save your configuration. If you want to preserve this wallpaper to always show up when you start Openbox, add
+			    this to your autostart.sh:</p>
+			    
+			    <p><code>nitrogen --restore &amp;</code></p>
+			    
+			    <p>This effectively has Nitrogen restore the preserved wallpaper and run in the background.</p>
+			
+			<br/>
+			<h4>[Root-menu]</h4>
+			
+			    <p>You pretty much have two options when it comes to configuring the "root menu" or right-click menu featured in Openbox--you can opt
+			    for the "manual" approach of editing your <em>rc.xml</em> by hand, or you can use <a href="http://obmenu.sourceforge.net/">obmenu</a> as a GUI alternative.</p>
+			    
+			    <p>Using obmenu would be as simple as running it and making sure you first open the right file by clicking the Open button, then navigating to [typically] ~/.config/openbox/rc.xml.</p>
+			    
+			    <p>Its interface is pretty much self-explanatory, but if you run into any trouble, you can consult the documentation <a href="http://obmenu.sourceforge.net/doc.html">here</a>.</p>
+			    
+			     <img src="lib/ob_2.png" style="margin:15px" alt="screenie 2" />
+			     
+			<h4>Panel</h4>
+			
+			<p>The final step you'll need to take to make your Openbox desktop fully-functional, IMO, is adding a panel. There are a number of popular apps out there, but I find that 
+			<a href="http://pypanel.sourceforge.net/">pypanel</a> goes extremely well with my Openbox setup.</p>
+			
+			<p>The first thing you'll want to take a look at in regard to this program is it's configuration file, located at <em>~/.pypanelrc</em> Configuration is extremely
+			straight-forward, but if you want a nice-looking setup to play around with immediately, here's mine:</p>
+			
+			<p><a href="pypanelrc">[my .pypanelrc]</a> (Place in your home(~/) directory -- DON'T FORGET THE '.')</p>
+			
+			<h4>Final Product</h4>
+			
+			<p>The end-result, with my <a href="pypanelrc">pypanelrc</a> file, should be something like this: </p>
+			
+			<a href="http://picasaweb.google.com/lh/photo/j1yAvox4jxCczH2uJCBQPw?feat=embedwebsite">
+			    <img src="http://lh6.ggpht.com/_uuidxpFmwB0/Sb8SB09zQxI/AAAAAAAAAXQ/nh4Nq5xctPE/s800/desktop_ob.png" alt="Openbox desktop" />
+			</a>
+			
+			<p>Obviously, you can tweak everything to your personal needs and preferences, but this setup should provide a nice foundation to build upon.</p>
+			
+			<p class="comment">Great place for minimalistic wallpapers: <a href="http://www.customize.org">Customize.org</a></p>
+			
+			<!-- <p>Configuring Openbox is a farily geekish affair(but what Linux-related thing isn't?)-\-it doesn't use a settings daemon like "Gnome Control Center",
+			so what you have to do is edit some XML files to get the desktop you want. In my case, these files are <em>~/.config/openbox/rc.xml</em>(WM config) and
+			<em>~/.config/openbox/menu.xml</em>("root menu" entries and config), but more on these later.</p> -->
+</div>
+	<p>
+        <a href="http://validator.w3.org/check?uri=referer">
+    		<img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+		</a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        	<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+		</a>
+	</p>
+</div>
+</body>
+</html>
