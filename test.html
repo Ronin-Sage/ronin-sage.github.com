@@ -6,6 +6,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     <title>The Portal</title>
 	<link rel="stylesheet" href="standard.css" type="text/css" />
 	<link rel="icon" type="image/png" href="favicon.ico" />
+	<script type="text/javascript" src="jquery.js" />
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="verify-v1" content="Bv2g7YVkrQvTjOBN0yeNldGtEa50VN61uLZqU1wLFaA=" />
 	<meta name="description" content="The personal site of aspiring webmaster and FOSS-enthusiast Adrian Sampson" />
@@ -29,6 +30,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	<div id="content">
 		<script type="text/javascript">
 			document.write("<p>test</p>");
+			 $(document).ready(function(){
+			   $("a").toggle(function(){
+				 $(".stuff").hide('slow');
+			   },function(){
+				 $(".stuff").show('fast');
+			   });
+			 });
+
 		</script>
 	</div>
 
