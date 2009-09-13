@@ -6,6 +6,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     <title>The Portal</title>
 	<link rel="stylesheet" href="standard.css" type="text/css" />
 	<link rel="icon" type="image/png" href="favicon.ico" />
+	<script type="text/javascript" src="scriptaculous/lib/prototype.js"></script>
+	<script type="text/javascript" src="scriptaculous/src/scriptaculous.js"></script>
+	<script type="text/javascript">
+		function toggleBlind(id)
+		{
+			Effect.toggle(id, 'blind', {duration:0.4});
+		}
+	</script>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="description" content="The personal site of aspiring webmaster and FOSS-enthusiast Adrian Sampson" />
 	<meta name="author" content="Adrian Sampson" />
@@ -42,184 +50,499 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
 <div id="content">
     <h2><span class="add">++</span>The Quick-List<span class="add">++</span></h2>
-	<h3 class="comment">A list of useful "underground" free/FOSS <br/> apps</h3>
-	<img style="margin-left:350px;margin-top:-75px" src="lib/quicklist.png" alt="quicklist" />
+	<p style="float:left;margin-bottom:35px">A list of useful "underground" free/FOSS <br/>apps</p>
+	<!--<img style="float:left;margin-bottom:35px" src="lib/quicklist.png" alt="quicklist" />-->
 	
 	<div class="summ">
-	<p>
-		<a href="http://software.twotoasts.de/"><img src="lib/midori.png" alt="Midori" /></a>
-		<b>Name: </b>Midori<br/>
-		<b>Platforms: </b> Linux, others(dependency-based)<br/>
-		<b>GUI: </b>GTK+<br/>
-		<b>License: </b> LGPL(free/open-source)<br/>
-		<b>Description: </b>Very promising lightweight WebKit browser<br/>
-		<b>Official Site: </b><a href="http://software.twotoasts.de/">http://software.twotoasts.de/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />4/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://software.twotoasts.de/">
+				<img src="lib/midori.png" alt="Midori" />
+			</a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Midori</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux, others(dependency-based)</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">LGPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Very promising lightweight WebKit browser</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value">
+				<a href="http://software.twotoasts.de/">http://software.twotoasts.de/</a>
+			</span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<p class="comment">4/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-	    <a href="http://www.srware.net/en/software_srware_iron.php"><img src="lib/iron.png" alt="Iron" /></a>
-		<b>Name: </b>Iron<br/>
-		<b>Platforms: </b>Windows<br/>
-		<b>License: </b>BSD(free/open-source)<br/>
-		<b>Description: </b>Nimble, lightweight, and attractive browser; based off of Chrome's source code, with the privacy
-		concerns resolved<br/>
-		<b>Official Site: </b><a href="http://www.srware.net/en/software_srware_iron.php">http://www.srware.net/en/software_srware_iron.php</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+	    <div class="summ_left">
+			<a href="http://www.srware.net/en/software_srware_iron.php"><img src="lib/iron.png" alt="Iron" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Iron</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">BSD(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Webkit and Chromium-based browser, with the privacy concerns of the latter resolved</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value">
+				<a href="http://www.srware.net/en/software_srware_iron.php">http://www.srware.net/en/software_srware_iron.php</a>
+			</span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://www.getpaint.net/"><img src="lib/paintdotnet.png" alt="Paint.NET" /></a>
-		<b>Name: </b>Paint.NET<br/>
-		<b>Platforms: </b>Windows<br/>
-		<b>License: </b>Freeware, MIT<br/>
-		<b>Description: </b>Lightweight raster-graphics editor with plugin support<br/>
-		<b>Official Site: </b><a href="http://www.getpaint.net/">http://www.getpaint.net/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://www.getpaint.net/"><img src="lib/paintdotnet.png" alt="Paint.NET" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Paint.NET</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">Freeware, MIT</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Lightweight raster-graphics editor with plugin support</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://www.getpaint.net/">http://www.getpaint.net/</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
 	</div>
     
     <div class="summ">
-    <p>
-        <a href="http://sourceforge.net/projects/gmrun"><img src="lib/gmrun.png" alt="gmrun" /></a>
-        <b>Name: </b>gmrun<br/>
-        <b>Platforms: </b>Linux<br/>
-		<b>GUI </b>GTK+<br/>
-        <b>License: </b>GPL(free/open-source)<br/>
-        <b>Description: </b>Light "run"/"completion-run" utility, with history searches and URL handlers<br/>
-        <b>Official Site: </b><a href="http://sourceforge.net/projects/gmrun">http://sourceforge.net/projects/gmrun</a><br/>
-        <b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-    </p>
+		<div class="summ_left">
+			<a href="http://sourceforge.net/projects/gmrun"><img src="lib/gmrun.png" alt="gmrun" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">gmrun</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">GPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Light "run"/"completion-run" utility, with history searches and URL handlers</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://sourceforge.net/projects/gmrun">http://sourceforge.net/projects/gmrun</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
     </div>
 	
 	<div class="summ">
-    <p>
-        <a href="http://phrat.de/yeahtools.html"><img src="lib/yeahconsole.png" alt="gmrun" /></a>
-        <b>Name: </b>yeahconsole<br/>
-        <b>Platforms: </b>Linux<br/>
-        <b>License: </b>GPL(free/open-source)<br/>
-        <b>Description: </b>Terminal emulator wrapper that allows for a quake/fps-console "drop-down" feel<br/>
-        <b>Official Site: </b><a href="http://phrat.de/yeahtools.html">http://phrat.de/yeahtools.html</a><br/>
-        <b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />4/5 win-points<br/>
-    </p>
+		<div class="summ_left">
+			<a href="http://phrat.de/yeahtools.html"><img src="lib/yeahconsole.png" alt="gmrun" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">yeahconsole</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">GPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Terminal emulator wrapper that allows for a quake/fps-console "drop-down" feel</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://phrat.de/yeahtools.html">http://phrat.de/yeahtools.html</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<p>4/5 win-points</p>
+			</span>
+		</div>
     </div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://www.activestate.com/komodo_edit/"><img src="lib/komodo.png"  alt="Komodo Edit" /></a>
-		<b>Name: </b>Komodo Edit<br/>
-		<b>Platforms: </b>Linux, Windows, OS X<br/>
-		<b>GUI: </b>GTK+(Linux)<br/>
-		<b>License: </b> MPL, GPL, LGPL(free/open-source)<br/>
-		<b>Description: </b> Middle-weight web/scripting language IDE/editor<br/>
-		<b>Official Site: </b><a href="http://www.activestate.com/komodo_edit/">http://www.activestate.com/komodo_edit</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />4/5 win-points
-	</p>
+		<div class="summ_left">
+			<a href="http://www.activestate.com/komodo_edit/"><img src="lib/komodo.png"  alt="Komodo Edit" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Komodo Edit</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux, Windows, OS X</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+(Linux)</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">MPL, GPL, LGPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Middle-weight web/scripting language IDE/editor</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://www.activestate.com/komodo_edit/">http://www.activestate.com/komodo_edit</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<p>4/5 win-points</p>
+			</span>
+		</div>
 	</div>
 		
 	<div class="summ">
-	<p>
-		<a href="http://www.geany.org/"><img src="lib/geany.png" alt="Geany" /></a>
-		<b>Name: </b>Geany<br/>
-		<b>Platforms:</b> Linux, Windows, OS X, &amp; others<br/>
-		<b>GUI: </b>GTK+<br/>
-		<b>License: </b> GPL(free/open-source)<br/>
-		<b>Description: </b>Light, but powerful code-editor with plugin support<br/>
-		<b>Official Site: </b><a href="http://www.geany.org/">http://www.geany.org/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://www.geany.org/"><img src="lib/geany.png" alt="Geany" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Geany</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux, Windows, OS X, &amp; others</span>
+			<br/>
+			<span class="attr_name">GUI: </span>
+			<span class="attr_value">GTK+</span>
+			<br/>
+			<span class="attr_name">License: </span>
+			<span class="attr_value">GPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Light, but powerful code-editor with plugin support</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://www.geany.org/">http://www.geany.org/</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>	
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://go-oo.org/"><img src="lib/go-oo.png" alt="go-oo" /></a>
-		<b>Name: </b>Go-OpenOffice<br/>
-		<b>Platforms: </b>Windows, Linux, OS X<br/>
-		<b>GUI: </b>GTK+(Linux), [OS native]<br/>
-		<b>License: </b>GPL,CDDL(free/open-source)<br/>
-		<b>Description: </b>Office suite forked from OpenOffice featuring improved performance, better
-		interoperability, specific framework support(Mono, GStreamer), and other enhancements<br/>
-		<b>Official site: </b><a href="http://go-oo.org">http://go-oo.org</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1/2pt" />5/5 win-points<br/>
-	</p>
+		<div class="summ_left"
+			<a href="http://go-oo.org/"><img src="lib/go-oo.png" alt="go-oo" /></a>
+		</div>
+	
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Go-OpenOffice</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows, Linux, OS X</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+(Linux), [OS native]</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">GPL,CDDL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Office suite forked from OpenOffice featuring improved performance, better
+			interoperability, specific framework support(Mono, GStreamer), and other enhancements</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://go-oo.org">http://go-oo.org</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1/2pt" />
+				<p>5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://www.abisource.com/"><img src="lib/abiword.png" alt="AbiWord" /></a>
-		<b>Name: </b>Abiword<br/>
-		<b>Platforms: </b>Windows, Linux, OS X(a bit outdated), &amp; others<br/>
-		<b>GUI: </b>GTK+, [OS native]<br/>
-		<b>License: </b>GPL(free/open-source)<br/>
-		<b>Description: </b>Lightweight, yet impressively-featured rich text editor<br/>
-		<b>Official Site: </b><a href="http://www.abisource.com/">http://www.abisource.com/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1/2pt" />5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://www.abisource.com/"><img src="lib/abiword.png" alt="AbiWord" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Abiword</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows, Linux, OS X(a bit outdated), &amp; others</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+, [OS native]</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">GPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Lightweight, yet impressively-featured rich text editor</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://www.abisource.com/">http://www.abisource.com/</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1/2pt" />
+				<p>5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://gnomecc.sourceforge.net/"><img src="lib/gnome-color-chooser.png" alt="gnome-color-chooser" /></a>
-		<b>Name: </b>GNOME Color Chooser<br/>
-		<b>Platforms: </b>Linux, others(anything that can run GTK+)<br/>
-		<b>GUI: </b>GTK+<br/>
-		<b>License: </b>GPL(free/open-source)<br/>
-		<b>Description: </b>Advanced color/engine configuration utility for GTK+ themes<br/>
-		<b>Official Site: </b><a href="http://gnomecc.sourceforge.net/">http://gnomecc.sourceforge.net/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://gnomecc.sourceforge.net/"><img src="lib/gnome-color-chooser.png" alt="gnome-color-chooser" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">GNOME Color Chooser</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux, others(anything that can run GTK+)</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">GPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Advanced color/engine configuration utility for GTK+ themes</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://gnomecc.sourceforge.net/">http://gnomecc.sourceforge.net/</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://hardinfo.berlios.de/HomePage"><img src="lib/hwinfo.png" alt="HardInfo" /></a>
-		<b>Name: </b>HardInfo<br/>
-		<b>Platforms: </b>Linux<br/>
-		<b>GUI: </b>GTK+<br/>
-		<b>License: </b>GPL2(free/open-source)<br/>
-		<b>Description: </b>System information and CPU-benchmarking tool<br/>
-		<b>Official Site: </b><a href="http://hardinfo.berlios.de/HomePage">http://hardinfo.berlios.de/HomePage</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://hardinfo.berlios.de/HomePage"><img src="lib/hwinfo.png" alt="HardInfo" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">HardInfo</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Linux</span>
+			<br/>
+			<span class="attr_name">GUI:</span>
+			<span class="attr_value">GTK+</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">GPL2(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">System information and CPU-benchmarking tool</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://hardinfo.berlios.de/HomePage">http://hardinfo.berlios.de/HomePage</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://www.kessels.com/Jkdefrag/"><img src="lib/jkdefrag.png" alt="JkDefrag" /></a>
-		<b>Name: JkDefrag</b><br/>
-		<b>Platforms: </b>Windows<br/>
-		<b>License: </b>GPL(free/open-source)<br/>
-		<b>Description: </b>Thorough disk defrag/optimization tool<br/>
-		<b>Official site: </b><a href="http://www.kessels.com/Jkdefrag/">http://www.kessels.com/Jkdefrag/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://pmcchp.com/baku/index.html"><img src="lib/baku.png" alt="Baku" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Baku</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">MPL(free/open-source)</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Junkfile-remover and registry cleaner/compactor</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://pmcchp.com/baku/index.html">http://pmcchp.com/baku/index.html</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<p>4/5 win-points</p>
+			</span>
+		</div>
+	</div>
+		
+	<div class="summ">
+		<div class="summ_left">
+			<a href="http://www.mydefrag.com"><img src="lib/jkdefrag.png" alt="JkDefrag" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">MyDefrag</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">Freeware</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Thorough disk defrag/optimization tool</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://www.mydefrag.com">http://www.mydefrag.com</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" />
+				<img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 	
 	<div class="summ">
-	<p>
-		<a href="http://www.quinnware.com/"><img src="lib/qmp.png" alt="QMP" /></a>
-		<b>Name: Quintessential Player(QMP; formerly, QCD)</b><br/>
-		<b>Platforms: </b>Windows<br/>
-		<b>License: </b>Freeware<br/>
-		<b>Description: </b>Quite powerful and customizable media player(handles video, but primarily meant for audio)<br/>
-		<b>Official Site: </b><a href="http://www.quinnware.com/">http://www.quinnware.com/</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup_half.png" alt="1/2pt" />4.5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://www.quinnware.com/"><img src="lib/qmp.png" alt="QMP" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">Quintessential Player(QMP; formerly, QCD)</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">Freeware</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Quite powerful and customizable media player(handles video, but primarily meant for audio)</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://www.quinnware.com/">http://www.quinnware.com/</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" />
+				<img src="lib/minithumbsup.png" alt="1/2pt" /><img src="lib/minithumbsup.png" alt="1/2pt" />
+				<img src="lib/minithumbsup_half.png" alt="1/2pt" />
+				<p>4.5/5 win-points</p>
+			</span>
+		</div>
 	</div>
+	
 	<div class="summ">
-	<p>
-		<a href="http://aimp.ru/index.php"><img src="lib/aimp.png" alt="AIMP" /></a>
-		<b>Name: </b>AIMP<br/>
-		<b>Platforms: </b>Windows<br/>
-		<b>License: </b>Freeware<br/>
-		<b>Description: </b>Very memory-efficient, feature-rich alternative audio player<br/>
-		<b>Official Site: </b><a href="http://aimp.ru/index.php">http://www.aimp.ru/index.php</a><br/>
-		<b>Rating: </b><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />5/5 win-points<br/>
-	</p>
+		<div class="summ_left">
+			<a href="http://aimp.ru/index.php?do=lang-en"><img src="lib/aimp.png" alt="AIMP" /></a>
+		</div>
+		
+		<div class="summ_right">
+			<span class="attr_name">Name:</span>
+			<span class="attr_value">AIMP</span>
+			<br/>
+			<span class="attr_name">Platforms:</span>
+			<span class="attr_value">Windows</span>
+			<br/>
+			<span class="attr_name">License:</span>
+			<span class="attr_value">Freeware</span>
+			<br/>
+			<span class="attr_name">Description:</span>
+			<span class="attr_value">Very memory-efficient, feature-rich alternative audio player</span>
+			<br/>
+			<span class="attr_name">Homepage:</span>
+			<span class="attr_value"><a href="http://aimp.ru/index.php">http://aimp.ru/index.php?do=lang-en</a></span>
+			<br/>
+			<span class="attr_name">Rating:</span>
+			<span class="attr_value">
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" /><img src="lib/minithumbsup.png" alt="1pt" />
+				<img src="lib/minithumbsup.png" alt="1pt" />
+				<p>5/5 win-points</p>
+			</span>
+		</div>
 	</div>
 		
 </div>
