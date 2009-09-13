@@ -279,7 +279,7 @@ em
 		font-size:18px;
 	}
 
-.comment, .attr_value p
+.comment, .attr_value span
 {
 	font-family:"Franklin Gothic Medium",Arial,sans-serif;
 	font-size:10px;
