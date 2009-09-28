@@ -10,9 +10,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	<script type="text/javascript" src="scriptaculous/src/scriptaculous.js"></script>
 	<script type="text/javascript" src="tooltip.js"></script>
 	<script type="text/javascript">
-		function measure(id)
+		function measure(id,lvl)
 		{
-			new Effect.Scale(id,200,{scaleY:false});
+			lvl = lvl * 100;
+			new Effect.Scale(id,lvl,{scaleY:false});
 		}	
 	</script>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -25,6 +26,21 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		{
 			display:none;
 			color:white;
+		}
+		.bar
+		{
+			width:50px;
+			height:35px;
+			background-color:lime;
+			margin:5px 0;
+		}
+		.mastery
+		{
+			max-width:400px;
+		}
+		.proficiency
+		{
+			max-width:300px;
 		}
 	</style>
 </head>
@@ -41,14 +57,16 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
 	<div id="header">
 	</div>
-
-\
-	<div style="height:100px;display:block">
-		<div id="tooltipTarget" style="background: #A6FFA3; width: 20px; height: 20px;"></div>
-<div id="tip_basic" class="tooltip">tooltip text here</div>
-<script type="text/javascript">new Tooltip('tooltipTarget', 'tip_basic', {className: 'tooltip'})</script> 
-</div>
 	
+	<div id="content">
+		<div id="xhtml" class="bar"></div>
+		<div id="css" class="bar"></div>
+		<div id="xml" class="bar"></div>
+	</div>
+	
+	<script type="text/javascript">
+		measure('xhtml',10);
+	</script>
 	
 </div>
 
