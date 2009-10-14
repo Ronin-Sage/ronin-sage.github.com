@@ -41,14 +41,13 @@ body
 		width:550px;
 		height:35px;
 		padding:0px;
-		font-family:"Trebuchet MS",Helvetica,sans-serif;
+		font-family:"Trebuchet MS",Helvetica,Arial,sans-serif;
 		font-size:10px;
 		font-weight:bold;
 		margin-right:-35px;
 		margin-top:-20px;
 		float:right;
 	}
-		
 			#top-nav li
 			{
 				width:90px;
@@ -109,6 +108,10 @@ body
 	margin-left:290px;
 	padding:15px 0;
 }
+	#content img
+	{
+		margin-left:25px;
+	}
 
 h1,h2
 {
@@ -154,12 +157,16 @@ h4
 	margin-left:20px;
 }
 
-.literature p
+.literature
 {
-	font-family:Verdana,Geneva,sans-serif;
-	font-size:14px;
-	text-indent:30px;
+	margin:10px 0;
 }
+	.literature p
+	{
+		font-family:Times,sans-serif;
+		font-size:14px;
+		text-indent:30px;
+	}
 
 p, blockquote, .list, .summ
 {
