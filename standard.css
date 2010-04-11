@@ -12,9 +12,13 @@ h1, h2, h3 {
 
 h1 {
 	color:#0A4;
-	font-size:11px;
+	font-size:13px;
 	font-weight:bold;
 	margin:0 0 25px 0;
+}
+
+h2 {
+	font-size:11px;
 }
 
 h3 {
@@ -43,7 +47,7 @@ li span {
 	color:#F2F1F0;
 }
 
-li a {
+li > a {
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 	visibility:hidden;
 }
@@ -105,4 +109,21 @@ img {
 #Content {
 	margin-left:50px;
 	float:left;
+}
+
+.categoryList {
+	list-style:none;
+}
+
+.categoryList li {
+	color:#FFF;
+}
+
+.categoryList li span {
+	color:#00AA44;
+	font-weight:bold;
+	text-align:right;
+	width:15em;
+	margin-right:10px;
+	display:inline-block;
 }
