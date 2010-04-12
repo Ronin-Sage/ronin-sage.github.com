@@ -48,7 +48,7 @@ li span {
 }
 
 li > a {
-	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
 	visibility:hidden;
 }
 
@@ -60,6 +60,14 @@ li a span {
 	letter-spacing:0.1em;
 	margin:0 0.5em;
 	visibility:visible;
+}
+
+fieldset {
+	border:1px solid #CCC;
+}
+
+fieldset legend {
+	color:#0A4;
 }
 
 img {
@@ -111,16 +119,22 @@ img {
 	float:left;
 }
 
-.categoryList {
-	list-style:none;
+.categoryList fieldset {
+	padding:0 6px 6px 6px;
 }
 
-.categoryList li {
+.categoryList fieldset ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.categoryList fieldset ul li {
 	color:#FFF;
 }
 
-.categoryList li span {
-	color:#00AA44;
+.categoryList fieldset ul li span {
+	color:#D2D1D0;
 	font-weight:bold;
 	text-align:right;
 	width:15em;
