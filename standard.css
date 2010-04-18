@@ -120,7 +120,8 @@ img {
 }
 
 .categoryList fieldset {
-	padding:0 6px 6px 6px;
+	border:none;
+	padding:10px;
 }
 
 .categoryList fieldset ul {
