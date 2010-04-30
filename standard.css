@@ -120,6 +120,7 @@ p {
 }
 
 #Content {
+	width:700px;
 	margin-left:50px;
 	float:left;
 }
