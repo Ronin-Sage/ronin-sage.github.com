@@ -30,13 +30,9 @@ img {
 	border:none;
 }
 
-h1, h2, h3 {
-	font-family:Tahoma,sans-serif;
-}
-
 h1 {
 	color:#0A4;
-	font-size:15px;
+	font-size:13px;
 	margin:0 0 20px 0;
 }
 
