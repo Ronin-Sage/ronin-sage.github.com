@@ -37,7 +37,7 @@ h1 {
 }
 
 h2 {
-	font-size:12px;
+	font-size:11px;
 	margin:15px 0;
 }
 
@@ -157,4 +157,8 @@ p {
 
 .journalEntries li a span {
 	font-weight:bold;
+}
+
+.italicized {
+	font-style:italic;
 }
